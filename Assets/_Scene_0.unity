@@ -273,6 +273,7 @@ GameObject:
   - 33: {fileID: 1536956045}
   - 23: {fileID: 1536956044}
   - 135: {fileID: 1536956043}
+  - 114: {fileID: 1536956046}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -341,6 +342,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1536956041}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1536956046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1536956041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec1d685e025fe346a9d2e3a5467ce36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationsPerSecond: 0.1
+  ________________: 0
+  levelShown: 0
 --- !u!1 &1865493968
 GameObject:
   m_ObjectHideFlags: 0
