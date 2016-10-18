@@ -100,9 +100,9 @@ GameObject:
   - 4: {fileID: 299814940}
   - 114: {fileID: 299814942}
   - 54: {fileID: 299814941}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: _Hero
-  m_TagString: Untagged
+  m_TagString: Hero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,7 +168,7 @@ GameObject:
   - 33: {fileID: 870028871}
   - 65: {fileID: 870028870}
   - 23: {fileID: 870028869}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1329014009}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cockpit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   - 23: {fileID: 1536956044}
   - 135: {fileID: 1536956043}
   - 114: {fileID: 1536956046}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +433,7 @@ GameObject:
   - 33: {fileID: 1999006715}
   - 65: {fileID: 1999006714}
   - 23: {fileID: 1999006713}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
