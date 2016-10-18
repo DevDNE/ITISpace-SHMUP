@@ -1,5 +1,6 @@
 ﻿using UnityEngine; // Required for Unity
 using System.Collections; // Required for Arrays & other Collections
+
 public class Enemy : MonoBehaviour
 {
     public float speed = 10f; // The speed in m/s
