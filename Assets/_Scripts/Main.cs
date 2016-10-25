@@ -16,9 +16,9 @@ public class Main : MonoBehaviour
         // Set Utils.camBounds
         Utils.SetCameraBounds(this.GetComponent<Camera>());
         // 0.5 enemies/second = enemySpawnRate of 2
-        enemySpawnRate = 1f / enemySpawnPerSecond; // 1
-                                                   // Invoke call SpawnEnemy() once after a 2 second delay
-        Invoke("SpawnEnemy", enemySpawnRate); // 2
+        enemySpawnRate = 1f / enemySpawnPerSecond;
+        // Invoke call SpawnEnemy() once after a 2 second delay
+        Invoke("SpawnEnemy", enemySpawnRate);
     }
     public void SpawnEnemy()
     {
@@ -33,6 +33,6 @@ public class Main : MonoBehaviour
         pos.y = Utils.camBounds.max.y + enemySpawnPadding;
         go.transform.position = pos;
         // Call SpawnEnemy() again in a couple of seconds
-        Invoke("SpawnEnemy", enemySpawnRate); // 3
+        Invoke("SpawnEnemy", enemySpawnRate);
     }
 }

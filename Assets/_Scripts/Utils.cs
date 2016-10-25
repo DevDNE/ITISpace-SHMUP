@@ -17,7 +17,7 @@ public class Utils : MonoBehaviour
     {
         // If the size of one of the bounds is Vector3.zero, ignore that one
         if (b0.size == Vector3.zero && b1.size != Vector3.zero)
-        { // 1
+        {
             return (b1);
         }
         else if (b0.size != Vector3.zero && b1.size == Vector3.zero)
@@ -29,7 +29,7 @@ public class Utils : MonoBehaviour
             return (b0);
         }
         // Stretch b0 to include the b1.min and b1.max
-        b0.Encapsulate(b1.min); // 2
+        b0.Encapsulate(b1.min);
         b0.Encapsulate(b1.max);
         return (b0);
     }
@@ -52,9 +52,9 @@ public class Utils : MonoBehaviour
         }
         // Recursively iterate through each child of this gameObject.transform
         foreach (Transform t in go.transform)
-        { // 1
+        { 
           // Expand b to contain their Bounds as well
-            b = BoundsUnion(b, CombineBoundsOfChildren(t.gameObject)); // 2
+            b = BoundsUnion(b, CombineBoundsOfChildren(t.gameObject)); 
         }
         return (b);
     }
@@ -74,11 +74,11 @@ public class Utils : MonoBehaviour
         }
     }
     // This is the private static field that camBounds uses
-    static private Bounds _camBounds; // 2
+    static private Bounds _camBounds;
     // This function is used by camBounds to set _camBounds and can also be
     // called directly.
     public static void SetCameraBounds(Camera cam = null)
-    { // 3
+    {
       // If no Camera was passed in, use the main Camera
         if (cam == null) cam = Camera.main;
         // This makes a couple of important assumptions about the camera!:
@@ -220,5 +220,32 @@ public class Utils : MonoBehaviour
                 return (off);
         }
         return (Vector3.zero);
+    }
+
+    //============================ Transform Functions ===========================\\
+    // This function will iteratively climb up the transform.parent tree
+    // until it either finds a parent with a tag != "Untagged" or no parent
+    public static GameObject FindTaggedParent(GameObject go)
+    { 
+        // If this gameObject has a tag
+        if (go.tag != "Untagged")
+        {
+            // then return this gameObject
+            return (go);
+        }
+        // If there is no parent of this Transform
+        if (go.transform.parent == null)
+        { 
+            // We've reached the top of the hierarchy with no interesting tag
+            // So return null
+            return (null);
+        }
+        // Otherwise, recursively climb up the tree
+        return (FindTaggedParent(go.transform.parent.gameObject));
+    }
+    // This version of the function handles things if a Transform is passed in
+    public static GameObject FindTaggedParent(Transform t)
+    {
+        return (FindTaggedParent(t.gameObject));
     }
 }
