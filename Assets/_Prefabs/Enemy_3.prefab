@@ -74,6 +74,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012949719460}
   - 54: {fileID: 54000012466167834}
+  - 114: {fileID: 114000014025113258}
   m_Layer: 9
   m_Name: Enemy_3
   m_TagString: Enemy
@@ -259,6 +260,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &114000014025113258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013833391266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed2857c0e1c7bd43b9d89f467cc69f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  fireRate: 0.3
+  health: 10
+  score: 100
+  showDamageForFrames: 2
+  powerUpDropChance: 1
+  ________________: 0
+  originalColors: []
+  materials: []
+  remainingDamageFrames: 0
+  bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  boundsCenterOffset: {x: 0, y: 0, z: 0}
+  points: []
+  birthTime: 0
+  lifeTime: 10
 --- !u!135 &135000012009562624
 SphereCollider:
   m_ObjectHideFlags: 1

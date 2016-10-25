@@ -854,6 +854,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabEnemies:
   - {fileID: 1000011760961712, guid: 46629d576d5fee14bb82b7e1a2f143ed, type: 2}
+  - {fileID: 1000011890748966, guid: 16eb243f58a4ae04791eb17c8d50925c, type: 2}
+  - {fileID: 1000014184221278, guid: 3bf62af9e3d3707488d18a9617cf40f1, type: 2}
+  - {fileID: 1000013833391266, guid: c9f2ed13e07eaf3488c157b3c5847ee9, type: 2}
+  - {fileID: 1000011719675696, guid: 04ec12ce7f425fa4d8d9fab64fb07116, type: 2}
   enemySpawnPerSecond: 0.5
   enemySpawnPadding: 1.5
   weaponDefinitions:
@@ -886,6 +890,9 @@ MonoBehaviour:
     continuousDamage: 0
     delayBetweenShots: 0
     velocity: 0
+  prefabPowerUp: {fileID: 1000010825045732, guid: 67b2334462c05e24ebc4c85b99af8fcb,
+    type: 2}
+  powerUpFrequency: 01000000010000000200000006000000
   ________________: 0
   activeWeaponTypes: 
   enemySpawnRate: 0
